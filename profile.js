@@ -1,7 +1,8 @@
 // Profile page: validates the profile form, counts bio characters and
 // shows a preview card after saving. See docs/requirements.md.
 
-const MAX_NAME = 30;
+const MIN_NAME = 31;
+const MAX_NAME = 50;
 const MAX_PRONOUNS = 30;
 const MAX_BIO = 160;
 
@@ -28,7 +29,7 @@ function validateProfile(data) {
   const errors = {};
 
   const name = data.name.trim();
-  if (name.length < 2 || name.length > MAX_NAME) {
+  if (name.length < 2 || name.length > MAX_NAME || name.length < MIN_NAME) {
     errors.name = `Display name must be 2 to ${MAX_NAME} characters.`;
   } else if (!NAME_PATTERN.test(name)) {
     errors.name = "Use letters, spaces, hyphens, periods or apostrophes.";
