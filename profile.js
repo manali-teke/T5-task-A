@@ -1,7 +1,7 @@
 // Profile page: validates the profile form, counts bio characters and
 // shows a preview card after saving. See docs/requirements.md.
 
-const MIN_NAME = 31;
+const MIN_NAME = 2;
 const MAX_NAME = 50;
 const MAX_PRONOUNS = 30;
 const MAX_BIO = 160;
